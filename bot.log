@@ -1,0 +1,82 @@
+2025-07-23 18:32:28 - __main__ - INFO - Initializing database...
+2025-07-23 18:32:28 - __main__ - INFO - Database initialized successfully
+2025-07-23 18:32:28 - __main__ - INFO - Initializing donation bot...
+2025-07-23 18:32:32 - payments - INFO - Payment handlers registered
+2025-07-23 18:32:32 - bot - INFO - All handlers registered successfully
+2025-07-23 18:32:32 - __main__ - INFO - Starting bot polling...
+2025-07-23 18:32:34 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085613674:AAFxmLtmc24LfMa-MMo4phxRKkvaSfxwb0A/getMe "HTTP/1.1 200 OK"
+2025-07-23 18:32:34 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 18:32:34 - telegram.ext.Application - INFO - Application started
+2025-07-23 18:32:35 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085613674:AAFxmLtmc24LfMa-MMo4phxRKkvaSfxwb0A/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-23 18:32:35 - __main__ - INFO - Bot is now running. Press Ctrl+C to stop.
+2025-07-23 18:32:40 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085613674:AAFxmLtmc24LfMa-MMo4phxRKkvaSfxwb0A/getUpdates "HTTP/1.1 409 Conflict"
+2025-07-23 18:32:40 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-07-23 18:32:40 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4364, in get_updates
+    await self._post(
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 622, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 651, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-07-23 18:32:46 - __main__ - INFO - Bot shutdown requested
+2025-07-23 18:32:46 - __main__ - INFO - Initiating graceful shutdown...
+2025-07-23 18:32:46 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085613674:AAFxmLtmc24LfMa-MMo4phxRKkvaSfxwb0A/getUpdates "HTTP/1.1 409 Conflict"
+2025-07-23 18:32:46 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py:376> exception=Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')>
+Traceback (most recent call last):
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4364, in get_updates
+    await self._post(
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 622, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 651, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\OsayWorld\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-07-23 18:32:47 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085613674:AAFxmLtmc24LfMa-MMo4phxRKkvaSfxwb0A/getUpdates "HTTP/1.1 200 OK"
+2025-07-23 18:32:47 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-07-23 18:32:47 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-07-23 18:32:47 - telegram.ext.Application - INFO - Application.stop() complete
+2025-07-23 18:32:47 - __main__ - INFO - Bot shutdown complete
