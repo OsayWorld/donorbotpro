@@ -51,7 +51,7 @@ class PaymentVerifier:
             {
                 'min': 10,
                 'max': 999,
-                'link': 'https://t.me/+8KlGXbkCm4dmZGM0',
+                'link': '',
                 'name': 'Helpers',
                 'next_tier': {
                     'min': 1000,
@@ -61,7 +61,7 @@ class PaymentVerifier:
             {
                 'min': 1000,
                 'max': 49999,
-                'link': 'https://t.me/+GYeEZcEeO7czNDM0',
+                'link': '',
                 'name': 'Knights',
                 'next_tier': {
                     'min': 50000,
@@ -71,7 +71,7 @@ class PaymentVerifier:
             {
                 'min': 50000,
                 'max': 150000,
-                'link': 'https://t.me/+FgIm2hIkXN0yNDI8',
+                'link': '',
                 'name': 'Kings',
                 'next_tier': None
             }
